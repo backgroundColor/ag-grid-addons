@@ -1,16 +1,15 @@
-/* @flow */
-import React from 'react';
+import React from 'react'
 
 export default class TestComponent extends React.Component {
-  sum(a :number, b: number) :number {
-    return a + b;
+  sum(a, b) {
+    return a + b
   }
 
-  render() :any {
+  render(){
     return (
       <div className="wrapper">
          The sum of 13 and 37 would be {this.sum(13, 37)}
       </div>
-    );
+    )
   }
 }

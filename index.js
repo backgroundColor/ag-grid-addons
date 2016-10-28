@@ -1,2 +1,2 @@
-module.exports = require('./lib/TestComponent');
-exports.default = require('./lib/TestComponent');
+// module.exports = require('./lib/TestComponent');
+exports.TestComponent = require('./lib/TestComponent').default
