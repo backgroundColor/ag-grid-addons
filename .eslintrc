@@ -5,7 +5,6 @@ parser: babel-eslint
 
 plugins:
   - react
-  - flowtype
   # - flowtype-errors
 
 rules:

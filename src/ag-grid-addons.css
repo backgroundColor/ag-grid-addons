@@ -1,0 +1,18 @@
+.ag-table-top-page-change{
+  text-align: right;
+  height: 30px;
+  line-height: 30px;
+}
+.ag-table-top-page-change button {
+  border: none;
+  height: 30px;
+  width: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  color: #666;
+}
+.ag-table-top-page-change button:hover {
+  background-color: #e6e6e6;
+}
