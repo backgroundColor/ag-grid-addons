@@ -22,7 +22,9 @@
   "homepage": "https://github.com/backgroundColor/ag-grid-addons",
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -45,8 +47,6 @@
     "faucet": "0.0.1",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-transform-catch-errors": "^1.0.2",
-    "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.3.1",
     "sinon": "^1.17.6",
     "tape": "^4.6.0",
