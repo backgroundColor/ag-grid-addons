@@ -1,18 +1,170 @@
-.ag-table-top-page-change{
+.page-tab-box{
+  padding: 10px;
   text-align: right;
-  height: 30px;
-  line-height: 30px;
+  color: #333;
 }
-.ag-table-top-page-change button {
+.page-tab-box button {
   border: none;
   height: 30px;
-  width: 20px;
+  color: #b3b3b3;
   font-size: 16px;
   background-color: #fff;
   cursor: pointer;
   outline: none;
+}
+.page-tab-box button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.page-tab-box button:hover {
+  background-color: #e3e3e3;
+}
+.page-tab-box-input{
+  width: 30px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+.page-tab-box-input:focus{
+  border-color: #85b7d9;
+}
+
+.page-tab-num-box{
+  display: inline-block;
+  height: 30px;
+}
+.page-tab-num-box ul, .page-tab-num-box li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.page-tab-num-box li {
+  padding: 2px 10px;
+  margin: 0px 2px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.page-tab-num-box li:hover {
+  border-color: #85b7d9;
+  cursor: pointer;
+}
+.page-size-container {
+  color:#666;
+  font-size: 1em;
+}
+
+.tip-message-box::before {
+    left: -6px;
+    top: 0px;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    border-right: 8px solid #383838;
+    border-bottom: 8px solid transparent;
+}
+#centerRow .ag-root {
+  border: 1px solid #e9e9e9;
   color: #666;
 }
-.ag-table-top-page-change button:hover {
-  background-color: #e6e6e6;
+#centerRow .ag-header-icon {
+  color: #666;
+  fill: #666;
+}
+#centerRow .ag-header-cell-menu-button:hover {
+  border: 1px solid #e9e9e9;
+}
+#centerRow .ag-cell {
+  border-right: 1px dotted #e9e9e9;
+}
+#centerRow .ag-body .ag-row:hover {
+  background-color: #e3f8ff;
+}
+#centerRow .ag-body .ag-row-selected, #centerRow .ag-body .ag-row.ag-row-selected:hover {
+  background-color: #84d7f5;
+}
+#centerRow .ag-cell-focus {
+  border: 1px solid transparent;
+  border-right: 1px dotted #e9e9e9;
+  outline: none;
+}
+#centerRow .ag-header {
+  background: transparent linear-gradient(#f2f2f2,#f2f2f2) repeat scroll 0 0;
+  color: #666;
+  border-color: #e9e9e9;
+}
+#centerRow .ag-header-cell {
+  border-right: 1px solid #e9e9e9;
+}
+.ag-paging-button {
+    border: none;
+    height: 30px;
+    width: 20px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.ag-paging-button:hover {
+    background-color: #e6e6e6;
+}
+.ag-fresh .ag-paging-button:disabled {
+    opacity: .7;
+    cursor: default;
+}
+.ag-paging-page-summary-panel {
+  color:#666;
+  font-size: 1em;
+}
+.ag-paging-page-summary-panel input {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.ag-paging-page-summary-panel input:focus {
+    border-color: #85b7d9;
+}
+.ag-page-size {
+    width: 45px;
+    float: left;
+    margin-right: 5px;
+    position: relative;
+}
+.ag-page-size select {
+    background: transparent;
+    width: 100%;
+    height: 20px;
+    line-height: 16px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-indent: 0;
+    position: relative;
+    z-index: 2;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-left: 5px;
+    color: #666;
+    outline: none;
+}
+.ag-fresh input, .ag-fresh select {
+    border-radius: 3px;
+}
+.ag-page-size select:focus {
+    border-color: #85b7d9;
+}
+.ag-page-size .select-arrow {
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }

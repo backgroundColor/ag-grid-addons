@@ -1,5 +1,6 @@
 React Component Boilerplate
 ===========================
+#1.组件包括 ControllBtn，DateFormat， PageNumChange， SearchFilter， TagCellRender， TipTemplate， TopPageChange（待续...）
 [![Build Status](https://travis-ci.org/olegakbarov/react-component-boilerplate.svg?branch=master)](https://travis-ci.org/olegakbarov/react-component-boilerplate)
 [![Dependency Status](https://img.shields.io/david/olegakbarov/react-component-boilerplate.svg)](https://david-dm.org/olegakbarov/react-component-boilerplate)
 [![devDependency Status](https://img.shields.io/david/dev/strongloop/express.svg?maxAge=2592000)](https://david-dm.org/olegakbarov/react-component-boilerplate?dev=true)

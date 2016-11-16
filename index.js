@@ -1,4 +1,9 @@
 // module.exports = require('./lib/TestComponent');
-exports.TestComponent = require('./lib/TestComponenta.js').default;
+exports.TestComponent = require('./lib/TestComponent.js').default;
 exports.TopChangePage = require('./lib/TopPageChange.js').default;
 exports.PageNumChange = require('./lib/PageNumChange.js').default;
+exports.TagCellRender = require('./lib/tagCellRender.js').default;
+exports.TipTemplate = require('./lib/tipTemplate.js').default;
+exports.SearchFilter = require('./lib/SearchFilter.js').default;
+exports.ControllBtn = require('./lib/controllBtn.js').default;
+exports.DateFormat = require('./lib/DateFormat.js').default;

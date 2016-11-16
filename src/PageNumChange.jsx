@@ -1,26 +1,35 @@
-import React from 'react';
-import './ag-grid-addons.css';
-type Props = {
-  total: Number,
-  onChange: Function,
-  pagesize: Number,
-  options: Array
-}
-export default class pageNumChange extends React.Component {
-  props: Props;
-  render() {
+import React from 'react'
+
+export default class PageNumChange extends React.Component {
+
+  constructor () {
+    super()
+    this.pageSizeChange = this.pageSizeChange.bind(this)
+  }
+  pageSizeChange (e) {
+    this.props.onChange(e.target.value)
+  }
+  render () {
+    const selectItem = this.props.pagesize[0]
     return (
-      <div className="agtable-pagenum-change">
-        <select onChange={this.props.onChange}
-          defaultValue={this.props.pagesize}>
+      <div className='page-size-container'>
+        <select defaultValue={selectItem} onChange={this.pageSizeChange}>
           {
-            this.props.options.map(num => {
-              return <option key={num}>{num}</option>;
+            this.props.pagesize.sort().map((item, index) => {
+              return <option key={`size${index}`} value={item}>{item}</option>
             })
           }
         </select>
-        条/页  共<span>{this.props.total}</span>条
+        条/页
+        <span>
+          &nbsp;&nbsp;共{this.props.total}条
+        </span>
       </div>
-    );
+    )
   }
+}
+PageNumChange.propTypes = {
+    pagesize: React.PropTypes.array,
+    onChange: React.PropTypes.func,
+    total: React.PropTypes.number
 }
