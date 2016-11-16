@@ -20,14 +20,18 @@ function tipTemplate (params, callback) {
   messageBox.innerHTML = tips.message
   // console.log(tips)
   const addMessageBox = (e) => {
-    messageBox.style.left = e.target.getBoundingClientRect().left + 'px'
-    messageBox.style.top = e.target.getBoundingClientRect().top + 'px'
-    gridBody.appendChild(messageBox)
+    messageBox.style.left = e.target.getBoundingClientRect().left + 6 + 'px'
+    messageBox.style.top = e.target.getBoundingClientRect().top + 6 + 'px'
+    // gridBody.appendChild(messageBox)
+    // document.body
+    document.body.appendChild(messageBox)
+    console.log(e.target.getClientRects())
     // console.log(e.target.getBoundingClientRect())
   }
   const moveMessageBox = () => {
     console.log('leave....')
-    gridBody.removeChild(messageBox)
+    document.body.removeChild(messageBox)
+    // gridBody.removeChild(messageBox)
   }
   const tip = document.createElement('span')
   const tipsIcon = {

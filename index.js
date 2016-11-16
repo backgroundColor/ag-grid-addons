@@ -7,3 +7,4 @@ exports.TipTemplate = require('./lib/tipTemplate.js').default;
 exports.SearchFilter = require('./lib/SearchFilter.js').default;
 exports.ControllBtn = require('./lib/controllBtn.js').default;
 exports.DateFormat = require('./lib/DateFormat.js').default;
+exports.TableResize = require('./lib/tableResize.js').default;
