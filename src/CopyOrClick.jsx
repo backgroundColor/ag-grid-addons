@@ -1,5 +1,6 @@
 function copyOrClick (callback) {
-  const centerRow = document.querySelector('#centerRow')
+  // const centerRow = document.querySelector('#centerRow')
+  const centerRow = document.body
   const that = this
   let rowclick = (params) => {
     callback(params)

@@ -25,7 +25,7 @@ function tipTemplate (params, callback) {
     // gridBody.appendChild(messageBox)
     // document.body
     document.body.appendChild(messageBox)
-    console.log(e.target.getClientRects())
+    // console.log(e.target.getClientRects())
     // console.log(e.target.getBoundingClientRect())
   }
   const moveMessageBox = () => {
