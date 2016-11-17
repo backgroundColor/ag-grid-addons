@@ -9,3 +9,5 @@ exports.ControllBtn = require('./lib/controllBtn.js').default;
 exports.DateFormat = require('./lib/DateFormat.js').default;
 exports.TableResize = require('./lib/tableResize.js').default;
 exports.CopyOrClick = require('./lib/CopyOrClick.js').default;
+exports.EditCell = require('./lib/EditCell.js').default;
+exports.StopEdit = require('./lib/StopEdit.js').default;
