@@ -28,7 +28,7 @@ export default class PageNumChange extends React.Component {
 
             }
           </select>
-          <label className="select-arrow" for="onChangeVal" id="forChangeBox">
+          <label className="select-arrow" htmlFor="onChangeVal" id="forChangeBox">
             <svg width="22px" height="20px" version="1.1" fill="#656D78">
               <path d="M7 8 L 10 13 L 13 8 Z"></path>
             </svg>
