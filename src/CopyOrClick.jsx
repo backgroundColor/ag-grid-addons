@@ -13,18 +13,7 @@ function copyOrClick (callback) {
     return {'x': x, 'y': y}
   }
   let listenerState = true
-  // window.addEventListener('keydown', function (event) {
-  //   if (event.keyCode === 17) {
-  //     // console.log(that.props)
-  //     that.gridOptions.api.removeEventListener('rowClicked', rowclick)
-  //     listenerState = false
-  //   }
-  // })
-  // window.addEventListener('keyup', function (event) {
-  //   that.gridOptions.api.addEventListener('rowClicked', rowclick)
-  //   listenerState = true
-  // })
-  centerRow.addEventListener('mousedown', function (event) {
+  const copyEvent = function (event) {
     let currPointer = getPointXy(event)
     this.onmousemove = function (e) {
       let pointer = getPointXy(e)
@@ -50,7 +39,18 @@ function copyOrClick (callback) {
         listenerState = true // 判断滚动的距离是否应该监听rowclick
       }
     }
+  }
+  window.addEventListener('keydown', function (event) {
+    if (event.keyCode === 17) {
+      that.gridOptions.api.removeEventListener('rowClicked', rowclick)
+      centerRow.removeEventListener('mousedown', copyEvent)
+    }
   })
+  window.addEventListener('keyup', function (event) {
+    that.gridOptions.api.addEventListener('rowClicked', rowclick)
+    centerRow.addEventListener('mousedown', copyEvent)
+  })
+  centerRow.addEventListener('mousedown', copyEvent)
 }
 
 export default copyOrClick
