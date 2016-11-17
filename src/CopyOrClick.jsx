@@ -1,6 +1,7 @@
 function copyOrClick (callback) {
   // const centerRow = document.querySelector('#centerRow')
-  const centerRow = document.body
+  // const centerRow = document.body
+  const centerRow = document.querySelector('.ag-fresh')
   const that = this
   let rowclick = (params) => {
     callback(params)
@@ -12,17 +13,17 @@ function copyOrClick (callback) {
     return {'x': x, 'y': y}
   }
   let listenerState = true
-  window.addEventListener('keydown', function (event) {
-    if (event.keyCode === 17) {
-      // console.log(that.props)
-      that.gridOptions.api.removeEventListener('rowClicked', rowclick)
-      listenerState = false
-    }
-  })
-  window.addEventListener('keyup', function (event) {
-    that.gridOptions.api.addEventListener('rowClicked', rowclick)
-    listenerState = true
-  })
+  // window.addEventListener('keydown', function (event) {
+  //   if (event.keyCode === 17) {
+  //     // console.log(that.props)
+  //     that.gridOptions.api.removeEventListener('rowClicked', rowclick)
+  //     listenerState = false
+  //   }
+  // })
+  // window.addEventListener('keyup', function (event) {
+  //   that.gridOptions.api.addEventListener('rowClicked', rowclick)
+  //   listenerState = true
+  // })
   centerRow.addEventListener('mousedown', function (event) {
     let currPointer = getPointXy(event)
     this.onmousemove = function (e) {
@@ -32,19 +33,21 @@ function copyOrClick (callback) {
         that.gridOptions.api.removeEventListener('rowClicked', rowclick) // 先移除rowclick事件
         console.log('cancel rowclick')
         this.onmousemove = null
-        // listenerState = false // 判断滚动的距离是否应该监听rowclick
+        listenerState = false // 判断滚动的距离是否应该监听rowclick
+      } else {
+        listenerState = true
       }
     }
-    // console.log(currPointer)
     this.onmouseup = function (event) {
       this.onmousemove = null
       let movePonter = getPointXy(event)
-      // console.log(movePonter)
       if (Math.abs(currPointer.x - movePonter.x) < 5 &&
       Math.abs(currPointer.y - movePonter.y) < 12 && listenerState === true) {
-        console.log(1)
         that.gridOptions.api.addEventListener('rowClicked', rowclick)
         listenerState = true
+      } else {
+        that.gridOptions.api.removeEventListener('rowClicked', rowclick);
+        listenerState = true // 判断滚动的距离是否应该监听rowclick
       }
     }
   })
