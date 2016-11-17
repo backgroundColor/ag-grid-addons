@@ -1,8 +1,25 @@
 React Component Boilerplate
 ===========================
 #1.组件
- ###ControllBtn，DateFormat， PageNumChange， SearchFilter， TagCellRender， TipTemplate， TopPageChange, CopyOrClick, TableResize（待续...）
- ###ControllBtn:
+###ControllBtn，DateFormat， PageNumChange， SearchFilter， TagCellRender， TipTemplate， TopPageChange, CopyOrClick, TableResize, EditCell, StopEdit（待续...）
+### EditCell， StopEdit
+使用方法
+
+
+
+    一般配合ControllBtn使用
+	eg:在ControllBtn参数data
+	const data = [
+          {innerHTML: '修改', href: 'javascript:;', onclick: (function (params) {
+            const currentVal = EditCell(params, 'projName')
+            console.log(currentVal)
+          }).bind(this)},
+          {innerHTML: '取消', href: 'javascript:;', onclick: function (params) {
+            StopEdit(params, 'projName', 'test')
+          }}
+		  EditCell 第二个参数代表要修改的列的field值，点击修改按钮则修改了按钮所在行的projName列对应的cell，且EditCell返回当前修改的cell的内容
+		  StopEdit 停止修改，第二个参数和EditCell的第二个参赛意义一样，第三个参数可传可不传，如传，表示停止编辑后，当前的cell显示的内容
+###ControllBtn:
  使用方法：
 
 
@@ -32,7 +49,7 @@ React Component Boilerplate
 
           pagesize为一个数组，数组的第一元素为默认选择
           onChange回调，获取的为当前选择的value
- ###SearchFilter:
+###SearchFilter:
   使用方法：
 
 
@@ -40,7 +57,7 @@ React Component Boilerplate
          在columnDefs中filter： SearchFilter
 
          为k2自定义的搜索组件，目前不支持后台过滤（后期添加）
- ###ControllBtn:
+###TagCellRender:
  使用方法：
 
 
@@ -54,7 +71,7 @@ React Component Boilerplate
         注意： 须在表格中展示的数据，即params.value为数组，
         可将其元素展示为标签，并支持Ctrl + click选中，并返回一个选中标签的内容的
         数组，支持翻页后返回仍被选中的状态。
-  ###TipTemplate:
+###TipTemplate:
   使用方法：
 
 
@@ -77,7 +94,7 @@ React Component Boilerplate
            return tips
          }
          注意：设置提示信息和提示类型 必须return一个数据， 数据格式{type:'success|fail|error|waring', message: 'sss'}
- ###CopyOrClick:
+###CopyOrClick:
  使用方法：
 
 

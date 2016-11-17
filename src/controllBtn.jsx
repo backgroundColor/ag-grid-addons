@@ -8,8 +8,18 @@ function controllBtn (params, data) {
       btn.style.textDecoration = 'none'
       btn.style.color = '#2db7f5'
       for (let key in data[i]) {
-        btn[key] = data[i][key]
+        if (key === 'onclick') {
+          btn.onclick = function () {
+            data[i]['onclick'](params)
+          }
+        } else {
+          btn[key] = data[i][key]
+        }
       }
+      // btn.onclick = function () {
+      //   // console.log(params)
+      //   data[0]['onclick'](params)
+      // }
       btnContainer.appendChild(btn)
 
     }
