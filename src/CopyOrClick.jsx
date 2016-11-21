@@ -41,14 +41,16 @@ function copyOrClick (callback) {
     }
   }
   window.addEventListener('keydown', function (event) {
-    if (event.keyCode === 17) {
+    if (event.keyCode === 17 && that.gridOptions.api) {
       that.gridOptions.api.removeEventListener('rowClicked', rowclick)
       centerRow.removeEventListener('mousedown', copyEvent)
     }
   })
   window.addEventListener('keyup', function (event) {
-    that.gridOptions.api.addEventListener('rowClicked', rowclick)
-    centerRow.addEventListener('mousedown', copyEvent)
+    if (that.gridOptions.api) {
+      that.gridOptions.api.addEventListener('rowClicked', rowclick)
+      centerRow.addEventListener('mousedown', copyEvent)
+    }
   })
   centerRow.addEventListener('mousedown', copyEvent)
 }
