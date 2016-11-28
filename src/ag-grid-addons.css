@@ -168,3 +168,28 @@
     top: 0;
     z-index: 1;
 }
+.filter-box {
+  width: 200px;
+}
+.filter-box .filter-box-title {
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 2px 5px;
+  color: #666;
+  font-size: 12px;
+}
+.filter-box .filter-box-container{
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 12px;
+}
+.filter-box .filter-box-container input {
+  width: 140px;
+  border: 1px solid #e3e3e3;
+  border-radius: 0;
+  padding: 2px 5px;
+}
+.filter-box .filter-box-container input:focus {
+  border-color: #85b7d9;
+  outline: none;
+}

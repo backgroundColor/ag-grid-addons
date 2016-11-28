@@ -1,5 +1,9 @@
 import React from 'react'
-
+type Props = {
+    pagesize: Array,
+    onChange: Function,
+    total: Number
+}
 export default class PageNumChange extends React.Component {
 
   constructor () {
@@ -41,9 +45,4 @@ export default class PageNumChange extends React.Component {
       </div>
     )
   }
-}
-PageNumChange.propTypes = {
-    pagesize: React.PropTypes.array,
-    onChange: React.PropTypes.func,
-    total: React.PropTypes.number
 }
