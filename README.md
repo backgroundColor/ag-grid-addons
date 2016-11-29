@@ -91,9 +91,10 @@ React Component Boilerplate
              tips.type = 'fail'
            }
            tips.message = params.value
+           tips.value = params.value
            return tips
          }
-         注意：设置提示信息和提示类型 必须return一个数据， 数据格式{type:'success|fail|error|waring', message: 'sss'}
+         注意：设置提示信息和提示类型 必须return一个数据， 数据格式{type:'success|fail|error|waring|info', message: 'sss', value: 'test'}
 ###CopyOrClick:
  使用方法：
 
