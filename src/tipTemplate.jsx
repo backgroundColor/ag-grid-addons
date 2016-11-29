@@ -18,7 +18,6 @@ function tipTemplate (params, callback) {
   messageBox.style.backgroundColor = '#383838'
   messageBox.className = 'tip-message-box'
   messageBox.innerHTML = tips.message
-  console.log(tips)
   const addMessageBox = (e) => {
     messageBox.style.left = e.target.getBoundingClientRect().left + 6 + 'px'
     messageBox.style.top = e.target.getBoundingClientRect().top + 6 + 'px'
